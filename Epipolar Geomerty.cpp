@@ -1,3 +1,26 @@
+// Step 1: Calibration  [F= k^(1^(-T) ) 〖[t]〗_x Rk^(-1)]
+// Fc_left = [fx.fy]
+// Cc_left = [cx cy]
+// Rotate vectore
+// Translation vectore [t] -> 〖[t]〗_(x_3x1 )
+
+// 0	〖-a〗_3	a_2
+// a_3	0	〖-a〗_1
+// 〖-a〗_2	a_1	0
+
+// Step 2: Selection of Points 
+// Step 3: plug it in
+// Generate 〖[a,d,c]〗^T
+
+// Step 4: Perform a loop from 0 to 640 and you will get y by calculating x
+
+// Step 5: Do NCC (normalized Cross Correlation)
+// cos⁡〖θ= ((a.) ̅  (b.) ̅)/(|a ̅ |.|b ̅|)〗
+
+
+
+
+
 #pragma once
 #include "opencv2/highgui/highgui.hpp" //highgui module, as this contains the functions for input and output operations
 #include "opencv2/core/core.hpp"
