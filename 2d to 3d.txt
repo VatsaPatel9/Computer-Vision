@@ -1,0 +1,32 @@
+To make an image from 2D to 3D 
+
+you need a JPG image and also a depth file .dat
+
+steps to be followed:
+
+Step 1: Convert 2D pixel into 3D points
+
+f	0	Cx	0
+0	f	Cy	0
+0	0	1	0
+
+y/Y=f/z
+Y=y/f*z-Cy.z
+(x,y) -> [x,y,z]
+
+f = focal length 524
+Image Resolution = 640 (w) x 480 (h)
+offset of x (Cx) = 316
+offset of y (Cy) = 256
+
+Step 2: Generate Extrinsics (Ex)
+R = Rotation (oritentation)
+T = Translation (position)
+
+R	T
+0	1
+
+Data3D – new = Ex * Data3D
+
+Step 3: Rander Virtual Image 
+K(Intrisics) * 3D_new
