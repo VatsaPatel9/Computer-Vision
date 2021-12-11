@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # In[2]:
 
 
-img = cv2.imread('C:/Users/19378/Pictures/Camera Roll/hmmm.jpg',cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('path',cv2.IMREAD_GRAYSCALE)
 
 plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
 plt.plot([600,600,600],[0,200,400],'b', linewidth=10) #just to draw on the image 
@@ -28,7 +28,7 @@ plt.show()
 # In[3]:
 
 
-img = cv2.imread('C:/Users/19378/Pictures/Camera Roll/jsk.jpeg',cv2.IMREAD_COLOR)
+img = cv2.imread('path',cv2.IMREAD_COLOR)
 px = img[200,200]
 img [200,200] = [255,255,255]
 print(px)
@@ -51,7 +51,7 @@ cv2.destroyAllWindows()
 # In[4]:
 
 
-image = cv2.imread('C:/Users/19378/Pictures/Camera Roll/hmmm.jpg')
+image = cv2.imread('path')
 #retval, threshold = cv2.threshold(image, 12, 250, cv2.THRESH_BINARY)
 greyscale = cv2.cvtColor (image, cv2.COLOR_BGR2GRAY)
 
@@ -96,10 +96,10 @@ cv2.destroyAllWindows()
 import numpy as np
 import cv2
 
-#face_cascade = cv2.CascadeClassifier('C:/openpose-1.6.0-binaries-win64-only_cpu-python-flir-3d/openpose/models/face/haarcascade_frontalface_alt.xml')
-face_cascade = cv2.CascadeClassifier('C:/Users/19378/Desktop/Education/LEARNING/haar_cascade_xml_files/haarcascade_frontalface_default.xml')
+#face_cascade = cv2.CascadeClassifier('path.xml')
+face_cascade = cv2.CascadeClassifier('path.xml')
 #https://github.com/Itseez/opencv/blob/master/data/haarcascades/haarcascade_eye.xml
-eye_cascade = cv2.CascadeClassifier('C:/Users/19378/Desktop/Education/LEARNING/haar_cascade_xml_files/haarcascade_eye.xml') 
+eye_cascade = cv2.CascadeClassifier('path.xml') 
 
 cap = cv2.VideoCapture(0)
 
@@ -137,11 +137,11 @@ cv2.destroyAllWindows()
 import numpy as np
 import cv2
 
-face_cascade = cv2.CascadeClassifier('C:/Users/19378/Desktop/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('path.xml')
 #https://github.com/Itseez/opencv/blob/master/data/haarcascades/haarcascade_eye.xml
-eye_cascade = cv2.CascadeClassifier('C:/Users/19378/Desktop/haarcascade_eye.xml')
+eye_cascade = cv2.CascadeClassifier('path.xml')
 
-smilee = cv2.CascadeClassifier('C:/Users/19378/Desktop/haarcascade_smile.xml')
+smilee = cv2.CascadeClassifier('path.xml')
 
 cap = cv2.VideoCapture(0)
 
